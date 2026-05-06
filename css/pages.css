@@ -1093,8 +1093,21 @@
     display: none;
   }
 
+  .hero-content {
+    padding-right: 0;
+  }
+
   .hero-image img {
     height: 500px;
+  }
+
+  .hero-image-decoration {
+    display: none;
+  }
+
+  .floating-card {
+    left: 10px;
+    bottom: 20px;
   }
 
   .editorial-about-grid {
@@ -1123,6 +1136,22 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: calc(100px + var(--spacing-md)) 0 var(--spacing-xl);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-image img {
+    height: 350px;
+  }
+
+  .hero-stats {
+    gap: 1.25rem;
+  }
+
   .hero-buttons {
     flex-direction: column;
   }

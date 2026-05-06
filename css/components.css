@@ -276,8 +276,27 @@ textarea.form-control {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   color: var(--text-muted);
   font-size: 0.95rem;
+}
+
+.developer-credit {
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.7);
+  letter-spacing: 0.01em;
+}
+
+.developer-credit a {
+  color: rgba(148, 163, 184, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.developer-credit a:hover {
+  color: var(--primary);
 }
 
 /* Floating WhatsApp */

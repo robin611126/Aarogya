@@ -1,0 +1,51 @@
+:root {
+  /* Premium Healthcare Color Palette */
+  --primary: #0D9488; /* Deep Teal - Trust, Clinical */
+  --primary-hover: #0F766E;
+  --secondary: #F0FDFA; /* Ultra-soft Sage/Teal */
+  --secondary-hover: #CCFBF1;
+  --base: #FFFFFF; /* Pure White */
+  --text-dark: #0F172A; /* Slate 900 - Sophisticated Dark */
+  --text-light: #475569; /* Slate 600 - Readable, soft */
+  --text-muted: #94A3B8; /* Slate 400 */
+  --accent: #111827; /* Near Black */
+  --bg-light: #F8FAFC; /* Slate 50 - Airy background */
+  --border-light: #E2E8F0; /* Slate 200 - Clean crisp lines */
+  --error: #E11D48; /* Rose 600 */
+  --success: #059669; /* Emerald 600 */
+
+  /* Typography */
+  /* Plus Jakarta Sans for a modern, geometric, friendly yet professional heading */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout / Spacing - Airy and expansive */
+  --max-width: 1280px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
+  --spacing-xxl: 8rem;
+
+  /* UI Elements - Refined shapes */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows - Extremely subtle, elegant */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 25px 50px -12px rgba(13, 148, 136, 0.12);
+  --shadow-glow: 0 0 40px rgba(13, 148, 136, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Premium Tactile Texture */
+  --bg-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}

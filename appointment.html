@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Aarogya Family Clinic</title>
+  <meta name="description" content="Quick, easy, and hassle-free appointment booking at Aarogya Family Clinic.">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i data-lucide="cross" class="logo-icon"></i>
+        Aarogya
+      </a>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="appointment.html" class="btn btn-primary active">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Editorial Page Header -->
+  <section class="page-header">
+    <div class="container fade-in-up">
+      <div style="margin-bottom: 1rem;"><span class="badge premium-badge">Easy Booking</span></div>
+      <h1 style="max-width: 800px;">Schedule Your Consultation.</h1>
+      <p class="text-lead" style="max-width: 600px; margin-top: 1.5rem;">Secure your appointment through our streamlined, hassle-free booking system.</p>
+    </div>
+  </section>
+
+  <!-- Appointment Form -->
+  <section class="section section-light" style="padding-top: 0; background-color: transparent; border-top: none;">
+    <div class="container">
+      <div class="card form-card fade-in-up">
+        <h2 style="margin-bottom: 2rem; text-align: center;">Patient Details</h2>
+        
+        <form id="appointmentForm" onsubmit="event.preventDefault(); alert('Appointment requested successfully! We will contact you to confirm.');">
+          <div class="grid grid-cols-2 gap-md form-grid-mobile">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Legal Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="jane.doe@example.com">
+          </div>
+
+          <div class="grid grid-cols-2 gap-md form-grid-mobile">
+            <div class="form-group">
+              <label class="form-label" for="date">Preferred Date</label>
+              <input type="date" id="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="time">Preferred Time Slot</label>
+              <select id="time" class="form-control" required>
+                <option value="" disabled selected>Select Time</option>
+                <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                <option value="evening">Evening (4:00 PM - 8:00 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="service">Consultation Type</label>
+            <select id="service" class="form-control" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="general">General Consultation</option>
+              <option value="pediatric">Pediatric Care</option>
+              <option value="womens-health">Women's Health</option>
+              <option value="diagnostics">Diagnostics & Screening</option>
+              <option value="online">Telemedicine (Online)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Medical Concern or Symptoms (Optional)</label>
+            <textarea id="message" class="form-control" placeholder="Please provide any context that will help our specialists prepare for your visit..."></textarea>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 320px; padding: 1.25rem;">Confirm Appointment</button>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted);">Note: While walk-ins are accommodated, scheduled appointments take priority to minimize waiting times.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="premium-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: var(--base); margin-bottom: 1.5rem; display: inline-flex;">
+            <i data-lucide="cross" class="logo-icon" style="color: var(--secondary);"></i>
+            Aarogya
+          </a>
+          <p class="footer-tagline">Expert medical care with a deeply personal touch.<br>Elevating healthcare standards for your entire family.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About Clinic</a>
+            <a href="services.html" class="footer-link">Medical Services</a>
+            <a href="testimonials.html" class="footer-link">Patient Stories</a>
+            <a href="appointment.html" class="footer-link">Book Consult</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Hours</h4>
+          <div class="footer-links">
+            <span class="footer-link">Mon–Sat: 9:00 AM – 8:00 PM</span>
+            <span class="footer-link">Sun: 10:00 AM – 2:00 PM</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-links">
+            <span class="footer-link flex-icon"><i data-lucide="map-pin" size="18"></i> Sector 14, Dwarka, New Delhi</span>
+            <span class="footer-link flex-icon"><i data-lucide="phone" size="18"></i> +91 98765 43210</span>
+            <span class="footer-link flex-icon"><i data-lucide="mail" size="18"></i> care@aarogyaclinic.in</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">&copy; 2026 Aarogya Family Clinic. All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook" size="20"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram" size="20"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter" size="20"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    @media (max-width: 600px) {
+      .form-grid-mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

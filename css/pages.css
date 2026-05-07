@@ -1142,23 +1142,38 @@
 @media (max-width: 768px) {
   .hero {
     padding: calc(100px + var(--spacing-md)) 0 var(--spacing-xl);
-    overflow: clip;
+    overflow: hidden; /* Use hidden not clip — strongest cross-browser clipping */
   }
 
   .hero-title {
     font-size: clamp(2rem, 8vw, 3rem);
   }
 
-  .hero-orb {
-    display: none;
-  }
-
+  /* Hide ALL decorative elements that can bleed outside viewport */
+  .hero-orb,
+  .hero-bg-glass,
+  .hero-image-decoration,
+  .image-offset-frame,
+  .service-bg-shape,
   .about-watermark {
     display: none;
   }
 
+  /* Reset perspective — creates rendering context that can extend beyond bounds */
+  .hero-image-wrapper {
+    perspective: none;
+  }
+
+  /* Reset 3D transform — primary cause of mobile overflow */
   .hero-image {
-    transform: none !important; /* Reset 3D rotation that bleeds outside viewport */
+    transform: none !important;
+    transition: none;
+  }
+
+  /* Remove padding-right that adds extra width in single-column layout */
+  .hero-content,
+  .editorial-content {
+    padding-right: 0;
   }
 
   .hero-image img {
@@ -1173,9 +1188,7 @@
     flex-direction: column;
   }
 
-  .editorial-badge {
-    right: 10px; /* Prevent negative right from overflowing viewport */
-  }
+  /* First editorial-badge rule removed — consolidated below */
   
   .trust-strip-glass {
     padding: 1.5rem;
@@ -1226,6 +1239,7 @@
 
   .premium-cta-box {
     padding: 3rem 1.5rem;
+    overflow: hidden; /* Clip cta-glow elements that use negative offsets */
   }
 
   .cta-actions {
@@ -1249,12 +1263,13 @@
 
   .editorial-image-wrapper {
     height: 350px;
+    overflow: hidden; /* Clip the badge that bleeds below the image */
   }
 
   .editorial-badge {
     padding: 1rem 1.25rem;
-    bottom: -15px;
-    right: 15px;
+    bottom: 10px; /* Was -15px — changed to positive so it stays inside wrapper */
+    right: 10px;  /* Was 15px/-30px — clamped to prevent right bleed */
   }
 
   .badge-number {

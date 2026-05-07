@@ -315,6 +315,9 @@ textarea.form-control {
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
   z-index: 999;
   transition: transform var(--transition-normal);
+  /* Prevent contributing to page overflow */
+  will-change: transform;
+  box-sizing: border-box;
 }
 
 .floating-whatsapp:hover {
@@ -330,11 +333,13 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   .navbar {
+    position: fixed;
     top: 1rem;
     left: 1rem;
     right: 1rem;
-    width: auto;
-    transform: none; /* crucial to avoid bounding child fixed positioning */
+    width: calc(100vw - 2rem); /* Use viewport units, not document % */
+    max-width: calc(100vw - 2rem);
+    transform: none; /* Crucial: no translateX so nav-links fixed pos works */
     padding: 0.75rem 1rem;
   }
 
@@ -453,5 +458,13 @@ textarea.form-control {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+  }
+
+  /* Clamp WhatsApp button tightly on mobile */
+  .floating-whatsapp {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 54px;
+    height: 54px;
   }
 }
